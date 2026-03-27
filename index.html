@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Hub | A World of Books at Your Fingertips</title>
+    <meta name="description" content="Book Hub offers a vast collection of novels, educational books, comics, and self-help books.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <i class="fas fa-book-open"></i> Book Hub
+            </a>
+            
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Books</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#order">Order</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="cart-icon" id="cart-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-badge" id="cart-badge">0</span>
+                </div>
+                <div class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Side Cart -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="side-cart" id="side-cart">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart" id="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-body" id="cart-items-container">
+            <!-- Cart items will be rendered here via JS -->
+            <div class="empty-cart-msg" id="empty-cart-msg">Your cart is empty.</div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            <button class="btn btn-primary w-100" id="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Book Hub</h1>
+            <p class="hero-tagline">"A World of Books at Your Fingertips"</p>
+            <a href="#products" class="btn btn-primary hero-btn">Explore Collection</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Books</h2>
+                <p>Discover our wide selection of novels, educational material, comics, and self-help books.</p>
+            </div>
+            
+            <div class="products-grid" id="products-grid">
+                <!-- Products injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section (Grid Layout) -->
+    <section id="gallery" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Library Aesthetic</h2>
+                <p>A glimpse into the magical world of reading.</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=600&q=80" alt="Library Scene" loading="lazy"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=600&q=80" alt="Books on shelf" loading="lazy"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=600&q=80" alt="Reading book" loading="lazy"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1481622814062-84948a27d216?w=600&q=80" alt="Book stack" loading="lazy"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=600&q=80" alt="Open book" loading="lazy"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=600&q=80" alt="Reading glasses on book" loading="lazy"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1476275466078-4007374efac4?w=600&q=80" alt="Cozy reading corner" loading="lazy"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&q=80" alt="Library interior" loading="lazy"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?w=600&q=80" alt="Novel pages" loading="lazy"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1550399105-c4db5fb85c18?w=600&q=80" alt="Book cup" loading="lazy"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&q=80" alt="Study desk" loading="lazy"></div>
+                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1474366521946-c3d4b507abf2?w=600&q=80" alt="Pile of books" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Reader Reviews</h2>
+                <div class="overall-rating">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="rating-text">4.8 / 5 Average Rating</span>
+                </div>
+            </div>
+            
+            <div class="reviews-grid">
+                <!-- Review 1 -->
+                <div class="review-card">
+                    <div class="review-content">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p>"Book Hub has an amazing selection! The delivery was fast, and the books were packed beautifully. Highly recommended for book lovers."</p>
+                    </div>
+                    <div class="review-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Emma W." class="author-img">
+                        <div class="author-details">
+                            <h4>Emma W.</h4>
+                            <div class="stars small">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-card">
+                    <div class="review-content">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p>"I love the aesthetic of the website, very clean and easy to navigate. I found all the self-help books I was looking for instantly."</p>
+                    </div>
+                    <div class="review-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David M." class="author-img">
+                        <div class="author-details">
+                            <h4>David M.</h4>
+                            <div class="stars small">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card">
+                    <div class="review-content">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p>"A wonderful online library experience! The collection of classic novels is simply fantastic. Great prices too."</p>
+                    </div>
+                    <div class="review-author">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sophia L." class="author-img">
+                        <div class="author-details">
+                            <h4>Sophia L.</h4>
+                            <div class="stars small">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Placement Section -->
+    <section id="order" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Place Your Order</h2>
+                <p>Fill out the form below to complete your purchase.</p>
+            </div>
+            
+            <div class="order-form-container">
+                <form id="order-form" class="order-form">
+                    <div class="form-group">
+                        <label for="order-name">Full Name</label>
+                        <input type="text" id="order-name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="order-phone">Phone Number</label>
+                        <input type="tel" id="order-phone" required placeholder="+1 234 567 8900">
+                    </div>
+                    <div class="form-group">
+                        <label for="order-email">Email Address</label>
+                        <input type="email" id="order-email" required placeholder="example@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="order-address">Delivery Address</label>
+                        <textarea id="order-address" rows="3" required placeholder="Your full address..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="order-books">Selected Books (Auto-filled from cart)</label>
+                        <textarea id="order-books" rows="2" readonly placeholder="Your cart is currently empty..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large w-100" id="submit-order-btn">Place Order</button>
+                </form>
+
+                <!-- Confirmation Message (Hidden by default) -->
+                <div id="order-confirmation" class="order-confirmation hidden">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Order Successfully Placed!</h3>
+                    <p>Thank you for choosing Book Hub. We have received your order and will process it shortly.</p>
+                    <button class="btn btn-secondary" id="continue-shopping">Continue Shopping</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer & Contact Details -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3><i class="fas fa-book-open"></i> Book Hub</h3>
+                    <p>A World of Books at Your Fingertips. Explore literature, expand your mind, and embark on new adventures with our carefully curated library.</p>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Information</h3>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-user text-primary"></i> <span>Manik</span></li>
+                        <li><i class="fas fa-phone text-primary"></i> <span>8950294682</span></li>
+                        <li><i class="fas fa-envelope text-primary"></i> <a href="mailto:manikarora123@gmail.com">manikarora123@gmail.com</a></li>
+                        <li><i class="fas fa-map-marker-alt text-primary"></i> <span>Panipat</span></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Books</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Book Hub. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
